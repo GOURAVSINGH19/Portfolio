@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body , html {
+  scrollbar-width: none;
+  background:url('../public/imgs/noise.png'),radial-gradient(at top, #f9a132 0%, #ddd 100%);
+  background-size: 250px, 100%;
+}
+
+.btn::after,
+.btn::before {
+  content: "";
+  position: relative;
+  width: 40%;
+  background-color: white;
+  height: 1px;
+  margin: auto;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn::before {
+  top: -1px;
+}
+
+.btn::after {
+  top: -1px;
+}
+
+.btn:active ::after {
+  top: -1px;
+}
+
+.btn:active ::before {
+  top: -1px;
+  transform: rotate(45deg);
+}
+
+.marquee {
+  animation: marquee-anim 100s linear infinite;
+}
+
+@keyframes marquee-anim {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.blocks-container {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  pointer-events: none;
+}
+.row {
+  flex: 1;
+  width: 100%;
+  display: flex;
+}
+.block {
+  position: relative;
+  flex: 1;
+  background-color: white;
+  margin: -0.25px;
+}
+
+.transition-in .block {
+  transform-origin: top;
+}
+
+.transition-out .block {
+  transform-origin: bottom;
+}
