@@ -90,7 +90,7 @@ const Section = ({ scrollYProgress }) => {
         </div>
       </motion.div>
 
-      <div className=" w-full h-full overflow-hidden absolute top-[50%] left-[50%]-translate-x-1/2 -translate-y-1/2">
+      <div className=" w-[50%] h-[50%] overflow-hidden absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2">
         <Canvas/> 
       </div>
 
