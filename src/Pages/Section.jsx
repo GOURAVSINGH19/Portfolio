@@ -4,8 +4,7 @@ import { motion, useTransform } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import Canvas from "../components/Canvas";
-import { FaHtml5 } from "react-icons/fa";
-
+import Magnetic from "../components/Magnetic/Magnetic";
 
 const navItems = [
   {
@@ -42,10 +41,12 @@ const Section = ({ scrollYProgress }) => {
     >
       <div className="px-10 py-4 flex justify-between items-center">
         <div className="capitalize cursor-pointer">
+          <Magnetic>
           <Link to="/Touch" className="flex items-center gap-2 underline">
             get in touch
-            <MdOutlineArrowOutward />
+            <MdOutlineArrowOutward/>
           </Link>
+          </Magnetic>
         </div>
 
         <div className="rounded-full bg-pink-700 py-2 px-3">
@@ -56,9 +57,11 @@ const Section = ({ scrollYProgress }) => {
 
         <div className="flex gap-10">
           {navItems.map((item, i) => (
+          <Magnetic>
             <Link key={i} to={item.href} className="capitalize">
               {item.title}
             </Link>
+          </Magnetic>
           ))}
         </div>
       </div>

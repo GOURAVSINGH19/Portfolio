@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 const Section4 = () => {
   return (
     <div 
-      className='relative h-[800px] bg-black'
+      className='relative h-screen bg-black'
       style={{clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)"}}
     >
       <div className='fixed  bottom-0 h-screen w-full'>
