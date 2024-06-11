@@ -8,15 +8,17 @@
     z-index: 99;
     background-color: #141516;
 }
-svg{
+.svg{
     position: absolute;
     top: 0;
+    left: 0;
     width: 100%;
     height: calc(100% + 300px);
     path{
-        fill: black;
+        fill:#141516;
     }
 }
+
 p{
     display: flex;
     color: white;

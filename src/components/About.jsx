@@ -1,5 +1,4 @@
 import React from "react";
-import Btn from "./Btn/Btn";
 
 const About = () => {
   return (
@@ -21,7 +20,7 @@ const About = () => {
         </div>
       </div>
       <div className="w-[40%] relative ">
-        <Btn />
+        hey
       </div>
     </div>
   );

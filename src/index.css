@@ -10,7 +10,8 @@
 
 body , html {
   scrollbar-width: none;
-  background:url('../public/imgs/noise.png'),radial-gradient(at top, #f9a132 0%, #ddd 100%);
+  /* background:url('../public/imgs/noise.png'),radial-gradient(at top, #f9a132 0%, #ddd 100%); */
+  background-color: black;
   background-size: 250px, 100%;
 }
 
@@ -43,16 +44,35 @@ body , html {
 }
 
 .marquee {
-  animation: marquee-anim 100s linear infinite;
+  animation: marquee-anim 55s linear infinite;
+  }
+  .marquee:hover{
+    
+    animation-play-state:paused ;
 }
-
 @keyframes marquee-anim {
   0% {
-    transform: translateX(0);
+    transform: translateX(0%);
   }
 
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-100%);
+  }
+}
+
+.link:hover{
+  color: #f9a132;
+  text-decoration: underline;
+  animation: ani 10s linear infinite ;
+}
+
+@keyframes ani {
+  0% {
+    text-decoration: none;
+  }
+
+  100% {
+    text-decoration: underline;
   }
 }
 

@@ -39,7 +39,7 @@ export default function Index() {
             {dimension.width > 0 && 
             <>
                 <motion.p variants={opacity} initial="initial" animate="enter"><span></span>{words[index]}</motion.p>
-                <svg>
+                <svg className='svg'> 
                     <motion.path variants={curve} initial="initial" exit="exit"></motion.path>
                 </svg>
             </>

@@ -8,7 +8,7 @@ const Section2 = ({ scrollYProgress }) => {
 
   return (
     <motion.div style={{ scale, rotate }} className="relative h-screen">
-      <div className="w-full h-screen bg-black text-white overflow-hidden py-10 px-5">
+      <div className="w-full h-screen bg-white text-black overflow-hidden py-10 px-5">
         <h1 className=" capitalize font-400 text-xl md:text-xl mb-10">
           tech stack
         </h1>
