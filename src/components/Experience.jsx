@@ -1,12 +1,19 @@
 import { Environment, OrbitControls } from "@react-three/drei";
-import { Me } from "./me";
+import Avatar from "./Avatar";
+import { useControls } from "leva";
 const Experience = () => {
+  const {animation} = useControls({
+    animation: {
+      Value: "flair",
+      options: ["Thriller", "Shuffling", "flair"],
+    },
+  });
   return (
     <>
-      <OrbitControls enablePan={true} enableZoom={true} enableRotate={true}/>
-      <Environment preset="sunset"/>
+      <OrbitControls enablePan={false} enableZoom={false} enableRotate={false} />
+      <Environment preset="sunset" />
       <group position-y={-1}>
-        <Me/>
+        <Avatar animation={animation} />
       </group>
     </>
   );

@@ -42,7 +42,7 @@ export default function index() {
           }}
         className="nav h-[50%] capitalize"
       >
-        <h1 className="text-zinc-400  font-600 text-[15px] border-b-2  border-zinc-500 ">Navigation</h1>
+        <h1 className="text-zinc-400  text-[15px] border-b-2  border-zinc-500">Navigation</h1>
         {navItems.map((data, index) => {
           return (
             <Link

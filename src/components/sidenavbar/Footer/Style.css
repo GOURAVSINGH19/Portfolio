@@ -1,10 +1,5 @@
 .footer{
-    display: flex;
-    flex-direction: column;
     width: 100%;
-    justify-content: space-evenly;
-    font-size:4.5vw;
-    font-weight: 800;
-    cursor: pointer;
     padding-top: 50px;
+    margin-bottom: 10px;
 }

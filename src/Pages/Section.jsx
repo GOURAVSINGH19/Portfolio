@@ -5,7 +5,7 @@ import { motion, useTransform } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import Magnetic from "../components/Magnetic/Magnetic";
-
+import Canvas from "../components/Canvas";
 const navItems = [
   {
     title: "Home",
@@ -100,9 +100,9 @@ const Section = ({ scrollYProgress }) => {
         </div>
       </motion.div>
 
-      {/* <div className=" w-[50%] h-[50%] overflow-hidden absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2">
+      <div className=" w-[80%] h-[80%]  absolute top-[50%] left-[50%]  -translate-x-1/2 -translate-y-1/2">
         <Canvas/> 
-      </div> */}
+      </div>
     </motion.div>
   );
 };

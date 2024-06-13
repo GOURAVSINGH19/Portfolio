@@ -20,14 +20,18 @@ const navItems = [
 export default function index() {
   return (
     <div className="footer">
-      <h1 className="text-zinc-500 border-b-2  border-zinc-500 font-500 capitalize">socials</h1>
+      <div className="w-[100%]">
+        <h1 className="text-zinc-400  text-[15px] border-b-2  border-zinc-500">
+          socials
+        </h1>
+      </div>
       {navItems.map(({ title, href }) => (
-        <div className="w-full pt-2 flex justify-start items-center gap-10 font-500 text-xl ">
-          <Magnetic>
-            <Link target="_blank" to={href} >
-              {title}
-            </Link>
-          </Magnetic>
+        <div className="pt-3 flex  text-[15px]">
+            <Magnetic>
+              <Link target="_blank" to={href} className=" text-white  font-[100] ">
+                {title}
+              </Link>
+            </Magnetic>
         </div>
       ))}
     </div>
