@@ -8,7 +8,8 @@
   box-sizing: border-box;
 }
 
-body , html {
+body,
+html {
   scrollbar-width: none;
   /* background:url('../public/imgs/noise.png'),radial-gradient(at top, #f9a132 0%, #ddd 100%); */
   background-color: black;
@@ -43,27 +44,10 @@ body , html {
   transform: rotate(45deg);
 }
 
-.marquee {
-  animation: marquee-anim 55s linear infinite;
-  }
-  .marquee:hover{
-    
-    animation-play-state:paused ;
-}
-@keyframes marquee-anim {
-  0% {
-    transform: translateX(0%);
-  }
-
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
-.link:hover{
+.link:hover {
   color: #f9a132;
   text-decoration: underline;
-  animation: ani 10s linear infinite ;
+  animation: ani 10s linear infinite;
 }
 
 @keyframes ani {
@@ -91,6 +75,7 @@ body , html {
   width: 100%;
   display: flex;
 }
+
 .block {
   position: relative;
   flex: 1;
@@ -104,4 +89,143 @@ body , html {
 
 .transition-out .block {
   transform-origin: bottom;
+}
+
+.middletext {
+  font-weight: 200;
+}
+
+.middletext:hover {
+  transform: 1s linear ease-in-out;
+  font-weight: 400;
+}
+
+.slider {
+  position: relative;
+  white-space: nowrap;
+}
+
+.slider p {
+  position: relative;
+  margin: 0px;
+  color: gray;
+  font-size: 230px;
+  font-weight: 300;
+  padding-right: 50px;
+  opacity: 0.8;
+}
+
+.slider p:nth-of-type(2) {
+  position: absolute;
+  left: 100%;
+  top: 0;
+}
+
+.body {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.card {
+  width: 600px;
+  min-height: 200px;
+  overflow: hidden;
+}
+
+/* card */
+.modalContainer {
+  height: 400px;
+  width: 450px;
+  position: absolute;
+  top: 25%;
+  right: 10%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalSlider {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transition: top 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.modal {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal img {
+  height: auto;
+}
+
+.cursor,
+.cursorLabel {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #455ce9;
+  color: white;
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 300;
+  pointer-events: none;
+}
+
+.cursorLabel {
+  background-color: transparent;
+}
+
+/* footer */
+.roundedButton {
+  border-radius: 3em;
+  border: 1px solid rgb(136, 136, 136);
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 60px 15px 60px;
+}
+h2 {
+  position: relative;
+  z-index: 1;
+  transition: color 0.4s linear;
+}
+
+.circle {
+  width: 100%;
+  height: 150%;
+  position: absolute;
+  border-radius: 50%;
+  top: 100%;
+}
+
+h1::after {
+  content: "";
+  width: 0%;
+  height: 1px;
+  background-color: white;
+  display: block;
+  margin-top: 2px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: width 0.2s linear;
+}
+h1:hover::after {
+  width: 100%;
 }

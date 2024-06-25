@@ -2,12 +2,12 @@ import { useTransform, motion } from "framer-motion";
 import React from "react";
 import About from "../components/About";
 
-const Section2 = ({ scrollYProgress }) => {
-  const scale = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
-  const rotate = useTransform(scrollYProgress, [0, 1], [5, 0]);
+const Section2 = () => {
+  // const scale = useTransform(scrollYProgress, [0, 1], [1, 0.4]);
+  // const rotate = useTransform(scrollYProgress, [0, 1], [0, -0.5]);
 
   return (
-    <motion.div style={{ scale, rotate }} className="relative h-screen">
+    <motion.div className="relative h-screen">
       <div className="w-full h-screen bg-white text-black overflow-hidden py-10 px-5">
         <h1 className=" capitalize font-400 text-xl md:text-xl mb-10">
           tech stack

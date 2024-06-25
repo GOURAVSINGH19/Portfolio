@@ -17,30 +17,27 @@ export default function Model(props) {
     return null;
   }
 
-  const { animations: Shuffling } = useFBX("animation/Shuffling.fbx");
-  const { animations: flair } = useFBX("animation/Flair.fbx");
-  const { animations: Thriller } = useFBX("animation/Thriller.fbx");
+  // ...
 
-  Shuffling[0].name = "Shuffling";
-  flair[0].name = "flair";
-  Thriller[0].name = "Thriller";
+  const { animations: HipHop } = useFBX("animation/HipHop.fbx");
+  const { animations: Texting } = useFBX("animation/Texting.fbx");
+
+  HipHop[0].name = "HipHop";
+  Texting[0].name = "Texting";
 
   const groupRef = useRef();
-  const { actions } = useAnimations(
-    [Shuffling[0], flair[0], Thriller[0]],
-    groupRef
-  );
+  const { actions } = useAnimations([HipHop[0], Texting[0]], groupRef);
 
   useEffect(() => {
-    actions[animation].reset().fadeIn(0.5).play();
+    actions["Texting"].reset().fadeIn(0.5).play();
     return () => {
-      actions[animation].reset().fadeOut(.5);
+      actions["Texting"].reset().fadeOut(0.5);
     };
   }, [animation]);
 
   return (
-    <group {...props} ref={groupRef} dispose={null}>
-      <group rotation-x={-Math.PI / 2}>
+    <group rotation-x={-Math.PI / 2}>
+      <group {...props} ref={groupRef} dispose={null}>
         <primitive object={nodes.Hips} />
         <skinnedMesh
           geometry={nodes.Wolf3D_Hair.geometry}

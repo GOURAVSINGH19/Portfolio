@@ -4,15 +4,15 @@ import { useControls } from "leva";
 const Experience = () => {
   const {animation} = useControls({
     animation: {
-      Value: "flair",
-      options: ["Thriller", "Shuffling", "flair"],
-    },
+      Value: "Texting",
+      options: ["HipHop","Texting"],
+    }
   });
   return (
     <>
-      <OrbitControls enablePan={false} enableZoom={false} enableRotate={false} />
+      <OrbitControls enablePan={true} enableZoom={false} enableRotate={false} />
       <Environment preset="sunset" />
-      <group position-y={-1}>
+      <group position-y={-.9} scale={.8}>
         <Avatar animation={animation} />
       </group>
     </>

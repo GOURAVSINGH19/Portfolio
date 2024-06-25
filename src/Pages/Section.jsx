@@ -1,10 +1,10 @@
 import React, { useRef } from "react";
 import { MdOutlineArrowOutward } from "react-icons/md";
 import Menubtn from "../components/Btn/Menubtn";
-import { motion, useTransform } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import Magnetic from "../components/Magnetic/Magnetic";
+import Middletext from "../Animation/Middletext";
 import Canvas from "../components/Canvas";
 const navItems = [
   {
@@ -17,93 +17,69 @@ const navItems = [
   },
 ];
 
-const Section = ({ scrollYProgress }) => {
-  const ref = useRef();
-  const [bgcolor, setBgColor] = useState("#000");
-  const [textColor, setTextColor] = useState("#000");
-
-  // const changeBgColor = () => {
-  //   setBgColor(bgcolor === "#000" ? "#C3E956" : "#000");
-  //   setTextColor(textColor === "#000" ? "#1F4B2C" : "#000");
-  // };
-
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 0.4]);
-  const rotate = useTransform(scrollYProgress, [0, 1], [0, -0.5]);
-
+const Section = () => {
+  
   return (
-    <motion.div
-      style={{ scale, rotate, transition: "background-color 2s ease" }}
-      className={`sticky top-0 h-screen ${
-        bgcolor === "#000" ? "bg-black" : "bg-[#C3E956]"
-      }  ${
-        textColor === "#000" ? "text-white" : "text-[#1F4B2C]"
-      } overflow-hidden  rounded-sm`}
+    <div
+      className={`sticky top-0 h-screen  overflow-hidden  rounded-sm`}
     >
       <div className="sm:px-15 sm:py-10 py-8 px-8 flex justify-between items-center relative ">
         <div>
-          <Link
-            to="/Touch"
-            className="link flex cursor-pointer items-center gap-2 capitalize text-zinc-400 text-sm md:text-[15px]"
-          >
-            get in touch
-            <MdOutlineArrowOutward/>
-          </Link>
+          <Magnetic>
+            <Link
+              to="/Touch"
+              className="link flex cursor-pointer items-center gap-2 capitalize text-zinc-400 text-sm md:text-[15px]"
+            >
+              get in touch
+              <MdOutlineArrowOutward />
+            </Link>
+          </Magnetic>
         </div>
 
-        {/* <div className="rounded-full bg-pink-700 py-2 px-3">
-          <button onClick={changeBgColor} className="capitalize">
-            Toggle
-          </button>
+        {/* animation btn */}
+        {/* <div className="flex gap-5 w-[10%]  items-center relative">
+          <div className="w-3 h-3  cursor-pointer bg-red-50 rounded-full"></div>
+          <div className="absolute -top-2 left-10">
+            <ul className="flex items-center flex-col gap- w-24  border-2 border-gray-200 ">
+              <li>Thriller</li>
+              <li>Texting</li>
+              <li>Ani</li>
+            </ul>
+          </div>
         </div> */}
 
         <div className="hidden sm:flex gap-10  items-center">
           {navItems.map((item, i) => (
-            <Link
-              key={i}
-              to={item.href}
-              className="capitalize text-sm md:text-xl"
-            >
-              {item.title}
-            </Link>
+            <Magnetic>
+              <Link
+                key={i}
+                to={item.href}
+                className="capitalize text-sm md:text-lg "
+              >
+                <h1>{item.title}</h1>
+              </Link>
+            </Magnetic>
           ))}
         </div>
-
+        {/* menubtn */}
         <div className=" sm:hidden ">
           <Menubtn />
         </div>
       </div>
-
-      <motion.div
+      {/* middle section */}
+      <div
         style={{ transition: "background-color 2s ease" }}
-        className={`w-full py-10  rounded-tr-3xl mt-15 flex justify-center  ${
-          bgcolor === "#000" ? "bg-black" : "bg-[#C3E956]"
-        }  `}
+        className={`w-full py-10  rounded-tr-3xl mt-15 flex justify-center `}
       >
-        <div className="   w-full flex gap-9 overflow-hidden whitespace-nowrap  select-none absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] ">
-          <div className=" marquee flex gap-10 justify-start">
-            <div>
-              <h1 className="text-[15rem] opacity-[.3]  leading-none uppercase pt-19 text-zinc-700">
-                GOURAV SINGH
-              </h1>
-            </div>
-            <div>
-              <h1 className="text-[15rem] opacity-[.3]  leading-none uppercase pt-19 text-zinc-700">
-                GOURAV SINGH
-              </h1>
-            </div>
-            <div>
-              <h1 className="text-[15rem] opacity-[.3]  leading-none uppercase pt-19 text-zinc-700">
-                GOURAV SINGH
-              </h1>
-            </div>
-          </div>
+        <div className="overflow-hidden select-none absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] ">
+          <Middletext />
         </div>
-      </motion.div>
-
-      <div className=" w-[80%] h-[80%]  absolute top-[50%] left-[50%]  -translate-x-1/2 -translate-y-1/2">
-        <Canvas/> 
       </div>
-    </motion.div>
+
+      <div className=" w-[80%] h-[80%]  absolute top-[50%] left-[50%]    inset-0 -translate-x-1/2 -translate-y-1/2">
+        <Canvas />
+      </div>
+    </div>
   );
 };
 
