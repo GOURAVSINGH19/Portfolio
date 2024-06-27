@@ -1,26 +1,24 @@
 import React from "react";
+import Rounded from "../components/Btn/Roundedbtn";
 
 const About = () => {
   return (
-    <div className="relative h-[400px] flex gap-5">
-      <div className="w-[60%] flex  items-center">
-        <div className=" p-5 gap-20 flex flex-col">
-          <h3 className="text-xl font-100 capitalize"> 
-            I endeavor to produce visually captivating encounters that
-            successfully communicate the brand's essence and capture the
-            intended audience's attention
-          </h3>
-          <h3 className=" text-md font-800  text-gray-500 hover:text-zinc-400 transform-all duration-300  ease-linear">
-            Possessing deep knowledge in digital design and a strong flair for
-            artistic guidance, my principal aim is to foster relationships among
-            firms and associations worldwide. I am dedicated to providing
-            inventive design strategies that not only amplify the visual
-            attractiveness but also boost the complete user experience.
-          </h3>
-        </div>
+    <div className="w-[100%] min-h-[60%] px-5 flex justify-center items-center flex-col">
+      <div className="max-w-screen-2xl w-auto  flex justify-evenly items-center  p-10">
+        <h3 className="sm:text-[2px] md:text-[2rem] font-300 capitalize tracking-tighter ">
+          Helping brands to stand out in the digital era. Together we will set
+          the new status quo. No nonsense, always on the cutting edge.
+        </h3>
+        <h3 className=" text-md font-800  text-gray-500 hover:text-zinc-400 transform-all duration-300 tracking-tighter   ease-linear">
+         The
+          combination of my passion for design, code & interaction positions me
+          in a unique place in the web design world
+        </h3>
       </div>
-      <div className="w-[40%] relative ">
-        hey
+      <div className="absolute bottom-28 w-[20%]  py-5 text-black capitalize font-extralight hover:text-white ">
+        <Rounded>
+          <h2>about</h2>
+        </Rounded>
       </div>
     </div>
   );

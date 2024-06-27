@@ -8,6 +8,7 @@
     z-index: 99;
     background-color: #141516;
 }
+
 .svg{
     position: absolute;
     top: 0;
@@ -31,7 +32,7 @@ span{
     display: block;
     width: 10px;
     height: 10px;
-    background-color: white;
+    background-color: #00FF19;
     border-radius: 50%;
     margin-right: 10px;
 }

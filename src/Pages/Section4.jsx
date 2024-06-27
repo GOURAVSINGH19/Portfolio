@@ -29,7 +29,7 @@ const Section4 = () => {
         <div className="h-[60vw] sm:h-[28vw] md:h-[30vw] w-screen absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] z-0">
           <Earth /> 
         </div>
-        <div className="w-screen flex  items-center justify-center absolute  bottom-24 sm:bottom-5">
+        <div className="w-screen flex  items-center justify-center absolute  bottom-16 sm:bottom-5">
           <div className="flex gap-10">
             <Link to="/">
               <Magnetic>

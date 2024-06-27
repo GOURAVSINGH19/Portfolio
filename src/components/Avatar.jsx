@@ -6,8 +6,8 @@ Command: npx gltfjsx@6.2.18 public/models/6668aed11b19a1354031074a.glb
 import React, { useEffect, useRef } from "react";
 import { useAnimations, useFBX, useGLTF } from "@react-three/drei";
 
-export default function Model(props) {
-  const { animation } = props;
+export default function Model() {
+  // const { animation } = props;
   const { nodes, materials, error } = useGLTF(
     "models/6668aed11b19a1354031074a.glb"
   );
@@ -19,25 +19,25 @@ export default function Model(props) {
 
   // ...
 
-  const { animations: HipHop } = useFBX("animation/HipHop.fbx");
+  // const { animations: HipHop } = useFBX("animation/HipHop.fbx");
   const { animations: Texting } = useFBX("animation/Texting.fbx");
 
-  HipHop[0].name = "HipHop";
+  // HipHop[0].name = "HipHop";
   Texting[0].name = "Texting";
 
   const groupRef = useRef();
-  const { actions } = useAnimations([HipHop[0], Texting[0]], groupRef);
+  const { actions } = useAnimations(Texting, groupRef);
 
   useEffect(() => {
-    actions["Texting"].reset().fadeIn(0.5).play();
+    actions["Texting"].reset().play();
     return () => {
-      actions["Texting"].reset().fadeOut(0.5);
+      actions["Texting"].reset().stop();
     };
-  }, [animation]);
+  }, []);
 
   return (
     <group rotation-x={-Math.PI / 2}>
-      <group {...props} ref={groupRef} dispose={null}>
+      <group  ref={groupRef} dispose={null}>
         <primitive object={nodes.Hips} />
         <skinnedMesh
           geometry={nodes.Wolf3D_Hair.geometry}

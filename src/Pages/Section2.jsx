@@ -8,37 +8,11 @@ const Section2 = () => {
 
   return (
     <motion.div className="relative h-screen">
-      <div className="w-full h-screen bg-white text-black overflow-hidden py-10 px-5">
+      <div className="w-full h-screen bg-white text-black overflow-hidden py-10 px-5 relative">
         <h1 className=" capitalize font-400 text-xl md:text-xl mb-10">
           tech stack
         </h1>
-        <div className="flex gap-10 flex-1">
-          <div className=" capitalize  w-2/3  sm:h-36 lg:52">
-            <h1 className="sm:text-xl md:text-2xl lg:text-2xl ">language</h1>
-            <div className=" w-[20vw] mt-5 flex gap-3">
-              <img src="/imgs/html.png" alt="htmlimg" className="w-10" />
-              <img src="/imgs/css-logo.png" alt="htmlimg" className="w-10" />
-              <img src="/imgs/javascript.png" alt="htmlimg" className="w-10" />
-            </div>
-          </div>
-          <div className=" w-2/3   sm:h-36 lg:52">
-            <h1 className=" capitalize sm:text-xl md:text-2xl lg:text-2xl  ">
-              tools
-            </h1>
-            <div className=" w-[20vw]">icon</div>
-          </div>
-          <div className=" w-2/3  sm:h-36 lg:52">
-            <h1 className="capitalize md:text-2xl lg:text-2xl">frameworks</h1>
-            <div className=" w-[20vw]">
-              <img
-                src="/imgs/react.png"
-                alt="react.img"
-                className="w-10 py-5"
-              />
-            </div>
-          </div>
-        </div>
-        <About />
+        {/* <About /> */}
       </div>
     </motion.div>
   );

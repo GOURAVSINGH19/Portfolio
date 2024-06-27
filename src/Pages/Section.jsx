@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import { MdOutlineArrowOutward } from "react-icons/md";
 import Menubtn from "../components/Btn/Menubtn";
 import { Link } from "react-router-dom";
@@ -21,7 +21,7 @@ const Section = () => {
   
   return (
     <div
-      className={`sticky top-0 h-screen  overflow-hidden  rounded-sm z-10`}
+      className={`sticky top-0 h-screen  overflow-hidden  rounded-sm`}
     >
       <div className="sm:px-15 sm:py-10 py-8 px-8 flex justify-between items-center relative ">
         <div>
@@ -76,7 +76,7 @@ const Section = () => {
         </div>
       </div>
 
-      <div className=" w-[80%] h-[80%]  absolute top-[50%] left-[50%] z-0 -translate-x-1/2 -translate-y-1/2">
+      <div className="w-[50%] h-[50%] sm:w-[60%] md:w-[80%] sm:[60%] md:h-[80%]  absolute top-[50%] left-[50%]  -translate-x-1/2 -translate-y-1/2 pointer-events-none">
         <Canvas />
       </div>
     </div>

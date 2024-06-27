@@ -41,10 +41,10 @@ export default function Middletext() {
   return (
       <div className="relative">
         <div ref={slider} className="slider">
-          <p ref={firstText}>Frontend Developer -</p>
-          <p ref={secondText}>Frontend Developer -</p>
+          <p ref={firstText} className='text-[150px] sm:text-[230px]'>Frontend Developer -</p>
+          <p ref={secondText} className='text-[150px] sm:text-[230px]'>Frontend Developer -</p>
         </div>
-        <div  className="slider2 absolute right-0 text-white   ">
+        <div  className=" absolute right-0 text-white   ">
           <p >GOURAV SINGH -</p>
         </div>
       </div>
