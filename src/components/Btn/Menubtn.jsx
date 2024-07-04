@@ -19,7 +19,7 @@ export default function Home() {
     <div className="main">
       <div className="header px-5">
       <Magnetic>
-        <div onClick={() => {setIsActive(!isActive)}} className="button">
+        <div onClick={() => {setIsActive(!isActive)}} className="button1">
           <div className={`${"burger"} ${isActive ? "burgerActive" : ""}`}></div>
         </div>
       </Magnetic>

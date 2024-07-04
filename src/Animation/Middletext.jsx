@@ -44,9 +44,6 @@ export default function Middletext() {
           <p ref={firstText} className='text-[150px] sm:text-[230px]'>Frontend Developer -</p>
           <p ref={secondText} className='text-[150px] sm:text-[230px]'>Frontend Developer -</p>
         </div>
-        <div  className=" absolute right-0 text-white   ">
-          <p >GOURAV SINGH -</p>
-        </div>
       </div>
   )
 }
